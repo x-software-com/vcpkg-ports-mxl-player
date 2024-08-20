@@ -16,6 +16,7 @@ vcpkg_from_gitlab(
         fix-mxl-gst-play-seek.patch
         fix-mxl-v1-tags.patch
         fix-mxl-baseparse-vfr.patch
+        fix-decodebin3-Remove-custom-EOS-handling.patch
         fix-clang-cl.patch
         # fix-clang-cl-gstreamer.patch
         # fix-clang-cl-base.patch
