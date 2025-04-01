@@ -27,7 +27,7 @@ vcpkg_from_gitlab(
         fix-bz2-windows-debug-dependency.patch
         no-downloads.patch
         ${PATCHES}
-		fix-multiple-def.patch
+        fix-multiple-def.patch
 )
 
 vcpkg_find_acquire_program(FLEX)
@@ -280,6 +280,7 @@ vcpkg_configure_meson(
         -Dgst-plugins-bad:sctp=auto
         -Dgst-plugins-bad:shm=disabled
         -Dgst-plugins-bad:spandsp=disabled
+        -Dgst-plugins-bad:svtav1=disabled
         -Dgst-plugins-bad:svthevcenc=disabled
         -Dgst-plugins-bad:teletext=disabled
         -Dgst-plugins-bad:tinyalsa=disabled
@@ -434,10 +435,10 @@ if(VCPKG_LIBRARY_LINKAGE STREQUAL "dynamic")
 endif()
 
 if(EXISTS "${CURRENT_PACKAGES_DIR}/lib/pkgconfig/gstreamer-gl-1.0.pc")
-  vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/lib/pkgconfig/gstreamer-gl-1.0.pc" [[${libinc}]] "")
+  vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/lib/pkgconfig/gstreamer-gl-1.0.pc" [[-I${libdir}/gstreamer-1.0/include]] "")
 endif()
 if(EXISTS "${CURRENT_PACKAGES_DIR}/debug/lib/pkgconfig/gstreamer-gl-1.0.pc")
-  vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/debug/lib/pkgconfig/gstreamer-gl-1.0.pc" [[${libinc}]] "")
+  vcpkg_replace_string("${CURRENT_PACKAGES_DIR}/debug/lib/pkgconfig/gstreamer-gl-1.0.pc" [[-I${libdir}/gstreamer-1.0/include]] "")
 endif()
 
 vcpkg_fixup_pkgconfig()
