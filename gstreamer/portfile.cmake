@@ -281,6 +281,7 @@ vcpkg_configure_meson(
         -Dgst-plugins-bad:sctp=auto
         -Dgst-plugins-bad:shm=disabled
         -Dgst-plugins-bad:spandsp=disabled
+        -Dgst-plugins-bad:svtav1=disabled
         -Dgst-plugins-bad:svthevcenc=disabled
         -Dgst-plugins-bad:teletext=disabled
         -Dgst-plugins-bad:tinyalsa=disabled
