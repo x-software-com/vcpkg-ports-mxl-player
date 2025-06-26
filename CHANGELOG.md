@@ -2,6 +2,21 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## v2025.3.19 - 2025-06-26
+#### Build system
+- use cargo install without locked argument - (b5faaf1) - marcbull
+#### Miscellaneous Chores
+- **(deps)** upgrade gstreamer to 1.26.0 - (9ceb2cd) - acpiccolo
+- Merge pull request #1 from x-software-com/gst-1.26.0 - (f00d481) - Marc
+- removed a difference between our gstreamer port file and the original file - (f02b86c) - acpiccolo
+- merge branch 'main' into gst-1.26.0 - (114d0f0) - acpiccolo
+- disable encoder svtav1 - (f3cd0dc) - acpiccolo
+- update gstreamer to vcpkg version 2025.03.19 - (c64e0ef) - acpiccolo
+- update gstreamer to vcpkg version 2025.01.13 - (5ee1a18) - marcbull
+- update GStreamer to 1.24.10 - (c9dbd37) - marcbull
+
+- - -
+
 ## v2024.10.21 - 2024-12-05
 #### Build system
 - update GStreamer to 1.24.9 - (94d7f47) - marcbull
